@@ -23,6 +23,7 @@ export default defineConfig({
         remote3:
           'remote1@https://unpkg.com/react-manifest-example_remote1@1.0.6/dist/mf-manifest.json',
         '@namespace/viteViteRemote': 'http://localhost:5176/testbase/mf-manifest.json',
+        '@namespace/viteViteRemote2': 'http://localhost:5176/testbase/mf-manifest2.json',
       },
       filename: 'remoteEntry-[hash].js',
       manifest: true,

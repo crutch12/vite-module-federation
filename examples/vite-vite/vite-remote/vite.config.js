@@ -45,6 +45,29 @@ export default defineConfig({
         '@mui/material': {},
       },
     }),
+    federation({
+      name: '@namespace/viteViteRemote2',
+      exposes: {
+        './App': './src/App.jsx',
+      },
+      filename: 'remoteEntry2.js',
+      manifest: { fileName: 'mf-manifest2.json' }, // generates correctly
+      shared: {
+        vue: {},
+        'react/': {},
+        react: {
+          requiredVersion: '18',
+        },
+        'react-dom/': {},
+        'react-dom': {},
+        'styled-components': { singleton: true },
+        'ag-grid-community/': {},
+        'ag-grid-react': {},
+        '@emotion/react': {},
+        '@emotion/styled': { singleton: true },
+        '@mui/material': {},
+      },
+    }),
     // If you set build.target: "chrome89", you can remove this plugin
     false && topLevelAwait(),
   ],

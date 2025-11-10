@@ -13,19 +13,19 @@ import { MuiDemo } from '@namespace/viteViteRemote/MuiDemo';
 import StyledDemo from '@namespace/viteViteRemote/StyledDemo';
 import { ref } from 'vue';
 
+import { App as ViteRemote2App } from '@namespace/viteViteRemote2';
+
 console.log('Share Vue', ref);
 console.log('Share React', R, RD);
 
 export default function () {
   return (
-    <div style={{ background: "lightgray" }}>
+    <div style={{ background: 'lightgray' }}>
       <p>
         Vite React (v {R.version}) app running from Host in{' '}
         <i> {import.meta.env.DEV ? ' Dev ' : ' prod '} mode </i>
       </p>
       <hr />
-
-
 
       <h2>Vite Remote Default App</h2>
       <App />
@@ -58,6 +58,9 @@ export default function () {
 
       <h2>Mfapp01App</h2>
       <Mfapp01App />
+
+      <h2>ViteRemote2App (FAILS)</h2>
+      <ViteRemote2App />
     </div>
   );
 }
